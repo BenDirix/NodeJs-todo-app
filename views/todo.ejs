@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To-do list</title>
+  <script
+			  src="http://code.jquery.com/jquery-1.12.4.js"
+			  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+			  crossorigin="anonymous"></script>
+  <script src="/assets/todo-list.js"></script>
+  <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>My to-do list</h1>
+<div id="todo-table">
+  <form>
+    <input type="text" name="item" placeholder="Add a new item..." required/>
+    <button type="submit">Add Item</button>
+  </form>
+  <br>
+  <ul>
+  <% todoList.forEach((todo)=>{ %>
+    <li><%= todo.item %></li>
+  <%})%>
+  </ul>
+</div>
+  
+</body>
+</html>
